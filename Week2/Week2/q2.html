@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q2</title>
+</head>
+<style>
+body {
+background-color: lightblue;
+}
+h1 {
+color: white;
+text-align: center;
+}
+p {
+font-family: verdana;
+font-size: 20px;
+}
+</style>
+<body>
+<h2>Wishing Button</h2>
+<input type="text" id="clock"/>
+<input type="text" id="Wish"/>
+  <script type="text/javascript">
+    setInterval("settime()", 1000);
+
+    function settime() 
+    {
+      var dateTime = new Date();
+      var hour = dateTime.getHours();
+      var minute = dateTime.getMinutes();
+      var second = dateTime.getSeconds();
+      var stri;
+      if (minute < 10)
+        minute = "0" + minute;
+
+      if (second < 10)
+        second = "0" + second;
+
+      var time = "" + hour + ":" + minute + ":" + second;
+
+      document.getElementById("clock").value = time;
+      if(hours>6 && hours<12)
+ 	 {stri = "Good Morning";}
+  else if(hours>12 && hours<16)
+ 	 {stri="Good Afternoon";}
+  else if(hours>16 && hours<24)
+ 	 {stri = "Good Evening ";}
+ 	document.getElementById("Wish").value = stri
+    }
+  </script>
+
+
+<button onclick="myFunction()">Try it</button>
+  
+<script>
+const now = new Date();
+const hours = now.getHours();
+function myFunction() {
+  if(hours>6 && hours<12)
+ 	 {alert("Good Morning Time is "+now);}
+  else if(hours>12 && hours<16)
+ 	 {alert("Good Afternoon Time is "+now);}
+  else if(hours>16 && hours<24)
+ 	 {alert("Good Evening Time is"+now);}
+}
+</script>
+
+</body>
+</html>
