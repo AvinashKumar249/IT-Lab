@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Q2</title>
+</head>
+<body>
+<input type="text" name="value1" id="textone">
+<input type="text" name="value2" id="operator">
+<input type="text" name="value3" id="texttwo">
+<input type="text" name="result" id="result">
+<button name="operate">Click to perform Operation</button>
+<script>
+    $("button").click(function(){
+        var textone;
+        var operator;
+        var texttwo;
+        textone = parseFloat($('#textone').val());
+        texttwo = parseFloat($('#texttwo').val());
+        operator = String($('#operator'));
+        if(operator=="+"){	
+        	var result = textone + texttwo;
+        }
+        else if(operator=="-"){	
+        	var result = textone - texttwo;
+        }
+        else if(operator=="*"){	
+        	var result = textone * texttwo;
+        }
+        else if (operator=="/"){	
+        	var result = textone / texttwo;
+        }
+        $('#result').val(result.toFixed(2));
+
+
+    });
+</script>
+</body>
